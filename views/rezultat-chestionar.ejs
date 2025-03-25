@@ -1,0 +1,19 @@
+
+<form>
+    <br/>
+    <fieldset>
+        <h2>Ați răspuns corect la <%= raspunsuri %> întrebări! </h2>
+        <h3>Întrebările și răspunsurile date de utilizator:</h3>
+        
+            <% for (let i = 0; i < intrebari.length; i++) { %>
+                    <p><%= intrebari[i].intrebare %></p>
+                    <% if (intrebari[i].variante[raspunsuriUtilizator[`q${i}`]] === intrebari[i].variante[intrebari[i].corect]) { %>
+                        <p class="raspuns-corect">√ Răspunsul tău: &nbsp<%= intrebari[i].variante[raspunsuriUtilizator[`q${i}`]] %></p>
+                    <% } else { %>
+                        <p class="raspuns-incorect">ꭗ Răspunsul tău: &nbsp<%= intrebari[i].variante[raspunsuriUtilizator[`q${i}`]] %></p>
+                    <% } %>
+            <% } %>
+        
+    </fieldset>
+    <br/>
+</form>

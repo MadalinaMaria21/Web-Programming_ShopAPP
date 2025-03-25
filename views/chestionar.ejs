@@ -1,0 +1,16 @@
+<h2>Chestionarul dumneavoastra ↓ </h2>
+<form action="rezultat-chestionar" method="post">
+    <div class="intrebari">
+        <%for( var i = 0 in intrebari) { %>
+            <div class="intrebare">
+                <p><%= intrebari[i].intrebare %></p>
+                <% for (var j = 0 in intrebari[i].variante) { %>
+                    <input type="radio" name="q<%= i %>" value="<%= j %>"/><%= intrebari[i].variante[j] %><br/> 
+                <% } %>
+            </div>
+        <% } %>
+    </div>
+    <br/>
+    <button class="button" type="submit"> Trimite chestionar!</button> 
+
+</form>

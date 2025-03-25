@@ -1,0 +1,29 @@
+<% if(utilizator) { %>
+    <% if(userR === 'admin') { %> 
+        <h2>Bine ai venit, <%= numeLogat %> </h2>
+        <h1>Adăugare Produs Nou</h1>
+
+        <form action="/admin/adaugare-produs" method="POST">
+            <label for="nume">Nume:</label>
+            <input type="text" id="nume" name="nume" required><br>
+
+            <label for="pret">Preț:</label>
+            <input type="number" id="pret" name="pret" step="0.01" required><br>
+
+            <label for="cantitate">Cantitate:</label>
+            <input type="number" id="cantitate" name="cantitate" required><br>
+
+            <label for="imagine">Imagine (URL):</label>
+            <input type="text" id="imagine" name="imagine" required><br>
+
+            <button type="submit">Adaugă Produs</button>
+        </form>
+
+        <a href="/">Înapoi la produse</a>
+    <% } else { %>  
+        <h2>Bine ai venit, <%= numeLogat %> </h2>
+        <h2>Din păcate trebuie să fiți administrator pentru a utiliza această pagină!</h2>
+    <% } %>
+<% } else { %>
+    <h2>Trebuie să fii autentificat pentru a accesa această pagină!</h2>
+<% } %>

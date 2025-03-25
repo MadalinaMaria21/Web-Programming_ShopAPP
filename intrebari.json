@@ -1,0 +1,102 @@
+[
+	{
+		"intrebare": "1: Care este cea mai consumată băutură din lume, după apă?",
+		"variante": [
+            "apa",
+            "cafeaua",
+            "ceiul",
+            "vodka"
+        ],
+		"corect": 1
+	},
+    {
+		"intrebare": "2: Care este țara de origine a ceaiului?",
+		"variante": [
+            "China", 
+            "Franța", 
+            "Germania",
+            "Estonia"
+        ],
+		"corect": 0
+	},
+    {
+		"intrebare": "3: Care e cel mai cunoscut sortiment de cafea ?",
+		"variante": [
+            "arabică", 
+            "robustă", 
+            "liberică",
+            "românească"
+        ],
+		"corect": 0
+	},
+    {
+		"intrebare": "4: Din ce parte a plantei se produce ceaiul negru?",
+		"variante": [
+            "frunze", 
+            "flori", 
+            "spini",
+            "scoarță"
+        ],
+		"corect": 0
+	},
+    {
+		"intrebare": "5: Care din următoarele NU este un tip de ceai?",
+		"variante": [
+            "matcha", 
+            "rooibos", 
+            "irlandez",
+            "arabica"
+        ],
+		"corect": 3
+	},
+    {
+		"intrebare": "6: Care este principalul ingredient activ din cafea??",
+		"variante": [
+            "lactoza", 
+            "lactaza", 
+            "fructoza",
+            "cafeina"
+        ],
+		"corect": 3
+	},
+    {
+		"intrebare": "7 : Ce vitamină se găseste în cafea ?",
+		"variante": [
+            "B", 
+            "D", 
+            "A",
+            "niciuna"
+        ],
+		"corect": 0
+	},
+    {
+		"intrebare": "8: Ce fel de ceai este cel mai des asociat cu proprietăți de relaxare și somn bun?",
+		"variante": [
+            "ceaiul de lavandă", 
+            "ceaiul de mușețel", 
+            "ceaiul de roiniță",
+            "ceaiul negru"
+        ],
+		"corect": 0
+	},
+    {
+		"intrebare": "9 :În ce moment al zilei se recomandă să se consume cafeaua ?",
+		"variante": [
+            "dimineața", 
+            "la prânz", 
+            "seara",
+            "noaptea"
+        ],
+		"corect": 0
+	},
+    {
+		"intrebare": "10 :Îți place că aici poți găsi atât ceaiuri, cât și cafea??",
+		"variante": [
+            "Da!", 
+            "Nu!", 
+            "Poate...",
+            "Absolut DA!"
+        ],
+		"corect": 3
+	}
+]

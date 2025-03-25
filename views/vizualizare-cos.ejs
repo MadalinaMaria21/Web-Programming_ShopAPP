@@ -1,0 +1,39 @@
+<h1>Coșul tău de cumpărături</h1>
+<h1>↓ ↓ ↓</h1>
+
+<% if (cos && Object.keys(cos).length > 0) { %>
+    <table>
+        <thead>
+            <tr>
+                <th>Imagine</th>
+                <th>Nume</th>
+                <th>Preț</th>
+                <th>Cantitate</th>
+                <th>Total</th>
+                <th>Acțiuni</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% Object.values(cos).forEach(produs => { %>
+                <tr>
+                    <td><img src="<%= produs.imagine %>" alt="<%= produs.nume %>" width="50"></td>
+                    <td><%= produs.nume %></td>
+                    <td><%= produs.pret %> lei</td>
+                    <td><%= produs.cantitate %></td>
+                    <td><%= produs.pret * produs.cantitate %> lei</td>
+                    <td>
+                        <form action="/eliminare_cos" method="POST">
+                            <input type="hidden" name="id" value="<%= produs.id %>">
+                            <button type="submit" class="sterge">Elimină</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+<% } else { %>
+    <p>Coșul tău este gol.</p>
+<% } %>
+<br>
+<button onclick="window.location.href='/'" class="button">Înapoi la produse</button>
+

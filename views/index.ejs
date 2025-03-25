@@ -1,0 +1,45 @@
+<% if (utilizator) { %>
+    <h2> Bine ai venit, <%= utilizator %>!</h2>
+    <h2>Autentificare reușită, acum poți accesa chestionarul nostru din bara de navigare!</h2>
+
+    <form action="/delogare" method="POST">
+        <button class="button" type="submit">Delogare</button>
+    </form>
+    <% if(userR === 'admin') { %>
+    
+        <form action="/creare-bd" method="get">
+            <button class="button" type="submit">Creare BD</button>
+        </form>
+        
+        <form action="/inserare-bd" method="get">
+            <button class="button" type="submit">Încărcare BD</button>
+        </form>
+    <% } %>
+    
+<% } else { %>
+    <h2> Bine ai venit!</h2>
+    <h2>Pentru a putea cumpăra și pentru a completa chestionarul, te rugăm să te autentifici în cont!</h2>
+<% } %>
+
+
+<h3>Produse disponibile:</h3>
+<% if (produse && produse.length > 0) { %>
+    <div class="product-container">
+        <% produse.forEach(produs => { %>
+            <div class="product">
+                <img src="<%= produs.imagine %>" alt="<%= produs.nume %>" width="100">
+                <p><strong>Nume:</strong> <%= produs.nume %></p>
+                <p><strong>Preț:</strong> <%= produs.pret %> lei</p>
+                <p><strong>Cantitate:</strong> <%= produs.cantitate %></p>
+                <% if (utilizator) { %>
+                    <form action="/adaugare_cos" method="POST">
+                        <input type="hidden" name="id" value="<%= produs.id %>">
+                        <button class="button" type="submit">Adaugă în coș</button>
+                    </form>
+                <% } %>
+            </div>
+        <% }); %>
+    </div>
+<% } else { %>
+    <p>Nu există produse disponibile în acest moment.</p>
+<% } %>

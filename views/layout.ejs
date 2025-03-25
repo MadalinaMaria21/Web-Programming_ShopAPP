@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aroma Tea & Coffe</title>
+        <link rel="stylesheet" type="text/css" href="stil.css">
+    </head>
+    
+    <body>
+        <header>
+            <!-- Header-ul site-ului -->
+            <img src="imagini/Aromas.png" alt="logo">
+            <h3>Aici te poți bucuara de savoarea băuturilor calde!</h3>
+        </header>
+        <nav>
+            <a href = "/"> Acasa</a>
+            <a href = "/vizualizare-cos">Cos de cumpărături</a>
+            <% if (utilizator) { %>
+                <a href="/chestionar">Chestionar</a>
+            <% } else { %>
+                <a href="/chestionar" style="pointer-events: none; color: gray;" >Chestionar</a>
+            <% } %>
+            <a href = "/autentificare">Autentificare</a>
+            <a href = "/admin">Admin</a>
+        </nav>
+        <main>
+            <%- body %> 
+        </main>
+        <footer>
+            <!-- Footer-ul site-ului -->
+            <p>Telefon: 0721023835 / 0233789221</p>
+            <p>Adresa: Calea Romanului, nr. 56, Judetul Neamt</p>
+            <p>Contact: aromas-tea&coffe@yahoo.com</p>
+        </footer>
+    </body>
+</html>

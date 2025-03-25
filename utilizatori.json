@@ -1,0 +1,9 @@
+[
+    { "userN": "test","userP": "test", "userR": "user"},
+    { "userN": "admin","userP": "admin", "userR": "admin"},
+    { "userN": "Ana","userP": "ana", "userR": "user"},
+    { "userN": "costel","userP": "costel", "userR": "user"},
+    { "userN": "Adina","userP": "adina", "userR": "user"},
+    { "userN": "Delia","userP": "delia", "userR": "user"}
+]
+
